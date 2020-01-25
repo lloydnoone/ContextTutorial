@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom'
 
 import Navbar from './Navbar'
@@ -7,19 +7,17 @@ import PageContent from './PageContent'
 import { ThemeProvider } from './contexts/ThemeContext'
 import { LanguageProvider } from './contexts/LanguageContext'
 
-class App extends Component {
-  render() {
-    return (
-      <ThemeProvider>
-        <PageContent>
-          <LanguageProvider>
-            <Navbar />
-            <Form />
-          </LanguageProvider>
-        </PageContent>
-      </ThemeProvider>
-    )
-  }
+function App() {
+  return (
+    <ThemeProvider>
+      <PageContent>
+        <LanguageProvider>
+          <Navbar />
+          <Form />
+        </LanguageProvider>
+      </PageContent>
+    </ThemeProvider>
+  )
 }
 
 ReactDOM.render(
